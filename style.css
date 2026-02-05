@@ -1,0 +1,1127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff8f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ========== HEADER ========== */
+.main-header {
+    background-color: #ff6f61;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #fff;
+    color: #ff6f61;
+}
+
+/* ========== ORDER SECTION ========== */
+.order-section {
+    background-color: #fff3f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.order-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+
+.order-form {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff6f61;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+    margin-top: 5px;
+}
+
+.main-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #e65b50;
+}
+
+/* ========== PRODUCTS GRID ========== */
+.section-title {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.section-title .sub-heading {
+    color: #ff6f61;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.cake-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+}
+
+.cake-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cake-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.cake-info h3 {
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.cake-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.order-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.order-now-btn:hover {
+    background-color: #e65b50;
+}
+
+.gallery {
+    padding: 50px 0;
+    background-color: #fff3f0;
+}
+
+.image-row-tight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-row-tight img {
+    width: 200px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.image-row-tight img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ff6f61;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cake-img img {
+        height: 180px;
+    }
+
+    .image-row-tight img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-form {
+        padding: 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-row-tight img {
+        width: 100%;
+    }
+}
+
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 1.8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+  text-align: center;
+  color: brown;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #c71585;
+  font-weight: bold;
+}
+
+/* Button */
+.about button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  border: none;
+  background: brown;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.about button:hover {
+  background: #8b0000;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  background: #ffb6c1;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+}
+
+.btn {
+  background: brown;
+  color: white;
+  padding: 10px 20px;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #fffafa;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.main-header {
+  background: #ffb6c1;
+  padding: 15px 0;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: brown;
+}
+
+
+/* ORDER SECTION */
+.order-section {
+  padding: 50px 0;
+  background: #fff0f5;
+}
+
+.order-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: brown;
+}
+
+.order-form {
+  max-width: 400px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.error-msg {
+  color: red;
+  font-size: 13px;
+  display: none;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: brown;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main-btn:hover {
+  background: #8b0000;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.cake-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Image section */
+.cake-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.cake-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text section */
+.cake-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.cake-info h3 {
+  font-size: 18px;
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.cake-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+            
+.section-title span.section-title{
+   text-align: center ;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fffafc;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: rgba(255, 182, 193, 0.95);
+  padding: 15px 25px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #8b0000;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+nav a.active,
+nav a:hover {
+  color: brown;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("../imgs/cake hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #ff69b4;
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #c71585;
+  transform: scale(1.05);
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= PRODUCTS ================= */
+.products-section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.sub-heading {
+  color: #c71585;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cake-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.cake-img {
+  height: 230px;
+  overflow: hidden;
+}
+
+.cake-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cake-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.cake-info h3 {
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.cake-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.order-now-btn {
+  display: inline-block;
+  background: #ff69b4;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.order-now-btn:hover {
+  background: #c71585;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  background: #fff0f5;
+  padding: 50px 20px;
+}
+
+.image-row-tight {
+  display: flex;
+  gap:}
+/* Button */
+.order-now-btn {
+  display: inline-block;
+  background: #ff69b4;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+footer p {text-align: center ;
+  background-color: #c71585;}
+.order-now-btn:hover {
+  background: #c71585;
+}
+. {margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fffafc;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: #ffb6c1;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #8b0000;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+nav a:hover {
+  color: brown;
+}
+
+/* ========== HERO ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fffafc;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: rgba(255, 182, 193, 0.95);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #8b0000;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+nav a:hover {
+  color: brown;
+}
+
+/* ================= HERO (BACKGROUND IMAGE) ================= */
+.hero {
+  min-height: 95vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("../imgs/cake hero.jpg"); /* 👉 sawirkaaga */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #ff69b4;
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #c71585;
+  transform: scale(1.05);
+}
+
+/* ================= PRODUCTS SECTION ================= */
+.products-section {
+  padding: 70px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.sub-heading {
+  color: #c71585;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cake-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.cake-img {
+  height: 230px;
+  overflow: hidden;
+}
+
+.cake-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cake-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.cake-info h3 {
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.cake-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.order-now-btn {
+  display: inline-block;
+  background: #ff69b4;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.order-now-btn:hover {
+  background: #c71585;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  background: #fff0f5;
+  padding: 50px 20px;
+}
+
+.image-row-tight {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-row-tight img {
+  width: 220px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.image-row-tight img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #ffb6c1;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .image-row-tight img {
+    width: 90%;
+  }
+}
+/* ========== PRODUCTS ========== */
+.products-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sub-heading {
+  color: #c71585;
+  font-weight: bold;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cake-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-8px);
+}
+
+.cake-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.cake-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cake-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.cake-info h3 {
+  color: brown;
+  margin-bottom: 10px;
+}
+
+.cake-info p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.order-now-btn {
+  display: inline-block;
+  background: #ff69b4;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.order-now-btn:hover {
+  background: #c71585;
+}
+
+/* ========== GALLERY ========== */
+.gallery {
+  padding: 40px 0;
+  background: #fff0f5;
+}
+
+.image-row-tight {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-row-tight img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #ffb6c1;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .image-row-tight img {
+    width: 90%;
+  }
+}
